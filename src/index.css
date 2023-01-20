@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@200&display=swap');
+
+div {
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #212121;
+  color: white;
+  height: 75px;
+}
+
+.nav h1,
+input {
+  margin: 0px 30px;
+}
+
+.input1 {
+  width: 20%;
+  height: 33px;
+  border: none;
+  border-radius: 7px;
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  margin: 70px 40px;
+}
+
+.input {
+  width: 100%;
+  margin: 15px 0px;
+  padding: 6px 0px;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+}
+
+.boton {
+  padding: 8px 20px;
+  margin: 10px;
+  background-color: #1565c0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.ul {
+  list-style-type: none;
+}
+
+.ul li {
+  margin: 10px;
+}
+
+h2 {
+  margin: 20px;
+}

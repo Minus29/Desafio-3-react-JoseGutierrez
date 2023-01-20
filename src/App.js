@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BaseColaboradores } from './baseDatos/BaseColaboradores.js';
+import { useState } from 'react';
+import Colaboradores from "./components/Colaboradores";
+import Formulario from "./components/Formulario";
+import Filtro from './components/Filtro.jsx';
+
+
+
 
 function App() {
+
+  const [listaColaboradores, setListaColaboradores] = useState(BaseColaboradores);
+  const [valorDeLaCaja, setValorDeLaCaja] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Filtro
+        setValorDeLaCaja={setValorDeLaCaja}
+      ></Filtro>
+      <Formulario
+        listaColaboradores={listaColaboradores}
+        setListaColaboradores={setListaColaboradores}>
+      </Formulario>
+      <Colaboradores
+        listaColaboradores={listaColaboradores}
+        valorDeLaCaja={valorDeLaCaja}
+      ></Colaboradores>
     </div>
   );
 }
